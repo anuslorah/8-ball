@@ -11,23 +11,22 @@ import android.support.v7.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity{
 
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int TIME_OUT = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashlayout);
 
+        //handler times out the splashlayout after SPLASH_TIME_OUT
         new Handler().postDelayed(new Runnable() {
-            //show splash screen with a timer
-            //start introactivity
+
             @Override
             public void run() {
                 Intent i = new Intent(SplashScreen.this, IntroScreen.class);
                 startActivity(i);
-                //close the activity
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        },TIME_OUT);
     }
 }

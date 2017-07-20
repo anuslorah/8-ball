@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splashKiss"
+    android:background="@android:color/holo_purple"
     android:screenOrientation="portrait">
 
     <Spinner
@@ -115,6 +115,8 @@
         android:text="@string/submitbutton"
         android:visibility="visible"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="goToTransition"
+        />
 
 </RelativeLayout>

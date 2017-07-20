@@ -22,7 +22,8 @@ public class QuestionScreen extends AppCompatActivity {
         submitbutton = (Button) findViewById(R.id.submitbutton);
 
     }
-    public void goToSplash(View view){
+    //clicking the button transitions to transitionlayout
+    public void goToTransition(View view){
         setContentView(R.layout.transitionlayout);
     }
 

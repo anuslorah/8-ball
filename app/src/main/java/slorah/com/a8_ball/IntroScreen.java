@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class IntroScreen extends AppCompatActivity {
 
     private TextView introText;
-    private static int SPLASH_TIME_OUT = 5000;
+    private static int TIME_OUT = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +20,15 @@ public class IntroScreen extends AppCompatActivity {
         //get references to the widget
         introText = (TextView) findViewById(R.id.introText);
 
+        //handler times out the introlayout after TIME_OUT
         new Handler().postDelayed(new Runnable() {
-            //show splash screen with a timer
-            //start introactivity
+
             @Override
             public void run() {
                 Intent i = new Intent(IntroScreen.this, QuestionScreen.class);
                 startActivity(i);
-                //close the activity
                 finish();
             }
-        },SPLASH_TIME_OUT);
+        },TIME_OUT);
     }
 }
