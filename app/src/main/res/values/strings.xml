@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">8-ball</string>
     <string name="introText">Welcome to the great dating predictor</string>
+    <string name="submitbutton">submit</string>
 </resources>
