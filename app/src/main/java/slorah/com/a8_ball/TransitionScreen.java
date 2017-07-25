@@ -1,18 +1,21 @@
 package slorah.com.a8_ball;
 
-import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ProgressBar;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by anusl on 7/12/2017.
  */
 
-
 public class TransitionScreen extends AppCompatActivity {
 
-    private static int TIME_OUT = 3000;
+    private ProgressBar progressBar;
+    //private static int TIME_OUT = 3000;
+    //private Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +23,26 @@ public class TransitionScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transitionlayout);
 
+        //get references to the widget
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        new Handler().postDelayed(new Runnable() {
+        //startTimer();
+    }//end onCreate
+/*
+    private void startTimer(){
 
+        //Log.d("tag","inside timer");
+        //create task
+        TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(TransitionScreen.this, ResultScreen.class);
-                startActivity(intent);
-                finish();
+                setContentView(R.layout.resultlayout);
             }
-        },TIME_OUT);
-    }//end onCreate
+        };
 
+        //create and start timer
+        timer = new Timer(true);
+        timer.schedule(task, TIME_OUT);
+    }
+ */
 }//end of TransitionScreen class

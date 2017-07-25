@@ -3,6 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_bright"
-    android:screenOrientation="portrait">
+    android:orientation="vertical"
+    android:screenOrientation="portrait"
+    android:weightSum="1">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="388dp"
+        android:layout_height="132dp" />
+
+    <TextView
+        android:id="@+id/progressTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09"
+        android:text="@string/progressTextView2"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="italic" />
 </LinearLayout>
