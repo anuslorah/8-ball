@@ -1,37 +1,3 @@
 <resources>
-    <string name="app_name">8-ball</string>
-    <string name="introText">Welcome to the great dating predictor</string>
-    <string name="submitbutton">submit</string>
-
-    <string-array name="Questions1">
-        <item>Which power ranger speaks to you most spiritually?</item>
-        <item>What...is your quest?</item>
-        <item>Do you think cats have any regrets?</item>
-        <item>What’s the longest you’ve left dropped food on the floor for before picking it up and eating it?</item>
-        <item>How many murders have you witnessed?</item>
-    </string-array>
-
-    <string-array name="Questions2">
-        <item>How long are you willing to sit in agony rather than stand up and get an out-of-reach remote?</item>
-        <item>How many days do you wear the same pants in a row before it becomes, like, a problem?</item>
-        <item>How quickly would you leave me for Chris Hemsworth?</item>
-        <item>Have you ever been, like, sexually attracted to a piece of fruit?</item>
-        <item>How many times a day do you wish you could just set yourself on fire?</item>
-    </string-array>
-
-    <string-array name="Questions3">
-        <item>Which room in Hogwarts would you most wanna have sex in?</item>
-        <item>How big do you think Thor’s penis is, just like, scientifically speaking?</item>
-        <item>Can I trust you to never pressure me into faving one of your tweets? Ever. Like, not even if we get married?</item>
-        <item>Do you put the toilet paper roll on the right way or the murderer way?</item>
-        <item>Have you ever shit so hard you had to lie down after?</item>
-    </string-array>
-
-    <string-array name="Questions4">
-        <item>How many donuts can you fit in your mouth at once?</item>
-        <item>Have you ever shit so hard you had to lie down after?</item>
-        <item>How many seconds into the first movie theatre preview do you finish your bucket of popcorn?</item>
-        <item>When is the last time you clogged a toilet and just left it for someone else to deal with?</item>
-        <item>Would you literally have sex with a minion?</item>
-    </string-array>
+    <string name="app_name">Date Ball</string>
 </resources>
