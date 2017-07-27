@@ -1,11 +1,16 @@
 package slorah.com.a8_ball;
 
+import android.animation.ObjectAnimator;
+import android.app.ProgressDialog;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import static android.R.id.progress;
+
 
 /**
  * Created by anusl on 7/12/2017.
@@ -13,9 +18,9 @@ import java.util.TimerTask;
 
 public class TransitionScreen extends AppCompatActivity {
 
-    private ProgressBar progressBar;
-    //private static int TIME_OUT = 3000;
-    //private Timer timer;
+    private ProgressBar progressBar = null;
+    //private int progressStatus = 0;
+    //private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,23 +31,15 @@ public class TransitionScreen extends AppCompatActivity {
         //get references to the widget
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        //startTimer();
+        ObjectAnimator animation = ObjectAnimator.ofInt(progressBar, "progress", 0, 50); // see this max value coming back here, we animale towards that value
+        animation.setDuration(500); //in milliseconds
+        animation.setInterpolator(new DecelerateInterpolator());
+        animation.start();
+
+        //progressBar.clearAnimation();
+        progressBar.setAnimation(null);
+        setContentView(R.layout.resultlayout);
+
+
     }//end onCreate
-/*
-    private void startTimer(){
-
-        //Log.d("tag","inside timer");
-        //create task
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                setContentView(R.layout.resultlayout);
-            }
-        };
-
-        //create and start timer
-        timer = new Timer(true);
-        timer.schedule(task, TIME_OUT);
-    }
- */
-}//end of TransitionScreen class
+}

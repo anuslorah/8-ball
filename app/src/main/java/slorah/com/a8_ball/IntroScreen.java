@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.app.PendingIntent;
-import android.content.Intent;
 import android.app.Notification;
 import android.app.NotificationManager;
 
@@ -26,7 +25,6 @@ public class IntroScreen extends AppCompatActivity {
         setContentView(R.layout.introlayout);
         startTimer();
 
-
         //get references to the widget
         introText = (TextView) findViewById(R.id.introText);
 
@@ -40,6 +38,8 @@ public class IntroScreen extends AppCompatActivity {
                 finish();
             }
         },TIME_OUT);
+
+        //Handler.removeCallback();
     }
 
     private void startTimer() {
@@ -56,8 +56,8 @@ public class IntroScreen extends AppCompatActivity {
         };
 
         timer = new Timer(true);
-        int delay = 1000 * 50;           // 50 seconds
-        int interval = 1000 * 10;       //10 seconds for testing
+        int delay = 1000 * 10;           // 50 seconds
+        int interval = 1000 * 60 * 60;       //10 seconds for testing
         //int interval = 1000 * 60 * 60 * 72;   // 72 hour
         timer.schedule(task, delay, interval);
     }
@@ -85,6 +85,7 @@ public class IntroScreen extends AppCompatActivity {
         //Create notification object
         Notification notification = new Notification.Builder(this)
                 // .setSmallIcon(icon)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setTicker(tickerText)
                 .setContentText(noteText)
                 .setContentIntent(pendingIntent)

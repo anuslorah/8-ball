@@ -3,14 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:screenOrientation="portrait"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="fill_horizontal"
-        app:srcCompat="@drawable/placeholderimage" />
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome">
 
     <TextView
         android:id="@+id/introText"
