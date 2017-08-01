@@ -6,30 +6,31 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by anusl on 7/12/2017.
+ * Created by anusl on 8/1/2017.
  */
 
-public class SplashScreen extends AppCompatActivity{
+public class ContentWarningScreen extends AppCompatActivity {
 
-    private static int TIME_OUT = 3000;
+    private static int TIME_OUT = 5000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splashlayout);
+        setContentView(R.layout.contentwarninglayout);
 
         //handler times out the splashlayout after SPLASH_TIME_OUT
         new Handler().postDelayed(new Runnable() {
 
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, ContentWarningScreen.class);
+                Intent i = new Intent(ContentWarningScreen.this, IntroScreen.class);
                 startActivity(i);
                 finish();
             }
 
 
-        },TIME_OUT);
+        }, TIME_OUT);
 
 
     }

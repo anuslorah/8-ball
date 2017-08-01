@@ -5,6 +5,7 @@
     android:background="@drawable/transition"
     android:screenOrientation="portrait">
 
+
     <Button
         android:id="@+id/yesButton"
         android:layout_width="wrap_content"
@@ -43,12 +44,14 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/responseView"
+        android:id="@+id/responsetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/restartView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
-        android:textColor="@color/colorAccent" />
+        android:layout_marginBottom="70dp"
+        android:text="@string/responsetextvalue"
+        android:textColor="@color/accent_material_dark_1" />
+
 
 </RelativeLayout>

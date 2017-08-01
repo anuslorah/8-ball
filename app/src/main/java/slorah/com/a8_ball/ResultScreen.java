@@ -21,7 +21,7 @@ public class ResultScreen extends AppCompatActivity {
     private Button noButton;
     public TextView responseText;
     String[] AnswerArray;
-    String response;
+    //String response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +33,10 @@ public class ResultScreen extends AppCompatActivity {
         //get references to the widget
         yesButton = (Button) findViewById(R.id.yesButton);
         noButton = (Button) findViewById(R.id.noButton);
-        responseText = (TextView) findViewById(R.id.responseView);
+        responseText = (TextView) findViewById(R.id.responsetext);
         //get the array
         AnswerArray = getResources().getStringArray(R.array.Answers);
+
         updateTextView();
 
 
@@ -48,15 +49,15 @@ public class ResultScreen extends AppCompatActivity {
     }
 
     private void updateTextView() {
-        TextView textView = (TextView) findViewById(R.id.responseView);
+        TextView textView = (TextView) findViewById(R.id.responsetext);
         Random random = new Random();
 
         int maxIndex = AnswerArray.length;
         int generatedIndex = random.nextInt(maxIndex);
 
-        textView.setText("Boo");
+        //textView.setText("Boo");
 
-        //textView.setText(AnswerArray[generatedIndex]);
+        textView.setText(AnswerArray[generatedIndex]);
     }
 
 

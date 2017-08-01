@@ -20,11 +20,8 @@
         <activity android:name=".QuestionScreen"></activity>
         <activity android:name=".TransitionScreen"></activity>
         <activity android:name=".ResultScreen"></activity>
+        <activity android:name=".ContentWarningScreen"></activity>
 
-        <service
-            android:name=".AgeVerificationService"
-            android:enabled="true"
-            android:exported="false"></service>
     </application>
 
 </manifest>

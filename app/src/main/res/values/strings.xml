@@ -3,7 +3,7 @@
     <string name="introText">Welcome to the great dating predictor</string>
     <string name="submitbutton">submit</string>
     <string name="progressTextView2">Hang Tight! We are calculating your prediction now...</string>
-    <string name="response" />
+    <string name="responsetextvalue" />
 
     <string-array name="Questions1">
         <item>Which power ranger speaks to you most spiritually?</item>
@@ -76,7 +76,7 @@
         <item>WTF! (Wrestle Then Fuck)</item>
         <item>I don\'t like you enough to give you a prediction...</item>
         <item>I predict you will shake the 8-ball again...</item>
-        <item>Your date is a child molester...BONUS?</item>
+        <item>Your date is a stalker...BONUS?</item>
         <item>You will be in love for one night...</item>
         <item>Put down the pipe...be alert...don\'t mess this up!</item>
         <item>RUN!</item>

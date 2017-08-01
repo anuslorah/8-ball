@@ -5,4 +5,5 @@
     android:background="@drawable/splashkiss"
     android:screenOrientation="portrait">
 
+
 </LinearLayout>
