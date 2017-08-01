@@ -1,4 +1,4 @@
-package com.example.zbrinlee.magic8ball;
+package slorah.com.a8_ball;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import slorah.com.a8_ball.R;
 
 /**
  * Created by anusl on 7/12/2017.
@@ -63,7 +65,7 @@ public class QuestionScreen extends AppCompatActivity {
     }
     //clicking the button transitions to transitionlayout
     public void goToTransition(View view){
-        setContentView(R.layout.transitionlayout);
+        setContentView(R.layout.resultlayout);
     }
 
 }

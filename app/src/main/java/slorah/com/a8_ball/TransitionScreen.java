@@ -2,12 +2,16 @@ package slorah.com.a8_ball;
 
 import android.animation.ObjectAnimator;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
+import android.widget.TextView;
+
+import java.util.Random;
 
 import static android.R.id.progress;
 
@@ -18,8 +22,11 @@ import static android.R.id.progress;
 
 public class TransitionScreen extends AppCompatActivity {
 
-    private ProgressBar progressBar = null;
-    //private int progressStatus = 0;
+    private static int TIME_OUT = 3000;
+
+    private ProgressBar progressBar;
+    //public int n;
+    private int progressStatus = 0;
     //private Handler handler = new Handler();
 
     @Override
@@ -31,6 +38,25 @@ public class TransitionScreen extends AppCompatActivity {
         //get references to the widget
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        //handler times out the splashlayout after SPLASH_TIME_OUT
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                Intent i = new Intent(TransitionScreen.this, ResultScreen.class);
+                startActivity(i);
+                progressStatus = 100;
+                finish();
+            }
+
+
+        }, TIME_OUT);
+
+        //Random rand = new Random();
+        //n = rand.nextInt(50)+1;
+
+
+        /*
         ObjectAnimator animation = ObjectAnimator.ofInt(progressBar, "progress", 0, 50); // see this max value coming back here, we animale towards that value
         animation.setDuration(500); //in milliseconds
         animation.setInterpolator(new DecelerateInterpolator());
@@ -40,6 +66,6 @@ public class TransitionScreen extends AppCompatActivity {
         progressBar.setAnimation(null);
         setContentView(R.layout.resultlayout);
 
-
+        */
     }//end onCreate
 }

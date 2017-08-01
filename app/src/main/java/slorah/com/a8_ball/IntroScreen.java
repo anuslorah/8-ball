@@ -80,7 +80,7 @@ public class IntroScreen extends AppCompatActivity {
         //needs to be linked to the correct icon once finalized
         int icon = R.mipmap.ic_launcher;
         CharSequence tickerText = "Have a hot date coming up?";
-        CharSequence noteText = "Have a hot date coming up? Let us predict how lucky you will get?";
+        CharSequence noteText = "Have a hot date coming up? \n Let us predict how lucky you will get?";
 
         //Create notification object
         Notification notification = new Notification.Builder(this)
