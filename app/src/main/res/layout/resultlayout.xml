@@ -51,7 +51,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:text="@string/responsetextvalue"
-        android:textColor="@color/accent_material_dark_1" />
+        android:hint="test"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textColor="@android:color/holo_red_dark" />
 
 
 </RelativeLayout>

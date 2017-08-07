@@ -36,8 +36,10 @@ public class ResultScreen extends AppCompatActivity {
         responseText = (TextView) findViewById(R.id.responsetext);
         //get the array
         AnswerArray = getResources().getStringArray(R.array.Answers);
+        responseText.setText("gggg");
+        //textView.setText(AnswerArray[generatedIndex]);
 
-        updateTextView();
+        //updateTextView();
 
 
     }
