@@ -129,6 +129,10 @@
         android:layout_weight="1"
         android:onClick="ResultScreen"
         android:text="Submit"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:background="@drawable/my_button_bg"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

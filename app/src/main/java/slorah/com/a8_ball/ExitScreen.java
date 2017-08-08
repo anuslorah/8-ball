@@ -1,9 +1,13 @@
 package slorah.com.a8_ball;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
+
+import me.anwarshahriar.calligrapher.Calligrapher;
 
 /**
  * Created by anusl on 8/7/2017.
@@ -11,32 +15,25 @@ import android.support.v7.app.AppCompatActivity;
 
 public class ExitScreen extends AppCompatActivity {
 
-    private static int TIME_OUT = 3000;
+    private static int TIME_OUT = 5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.exitlayout);
-/*
-        //handler times out the splashlayout after SPLASH_TIME_OUT
-        new Handler().postDelayed(new Runnable() {
 
-            @Override
+        //set page font
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "gabriola.ttf", true);
+
+        Handler handler = new Handler();
+
+        handler.postDelayed(new Runnable() {
             public void run() {
-                Intent intent = new Intent(getApplicationContext(), ExitScreen.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("EXIT", true);
-                startActivity(intent);
+                finishAffinity();
             }
+        }, TIME_OUT);
 
-
-        },TIME_OUT);
-
-        if (getIntent().getExtras() != null && getIntent().getExtras().getBoolean("EXIT", false)) {
-            finish();
-        }
-
-     */
     }
 }

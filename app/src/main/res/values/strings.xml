@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">8-ball</string>
+    <string name="app_name">D8-Ball</string>
     <string name="introText">Welcome to the great dating predictor</string>
     <string name="submitbutton">submit</string>
     <string name="progressTextView2">Hang Tight! We are calculating your prediction now...</string>
     <string name="responsetextvalue" />
+    <string name="blankTextView" />
 
     <string-array name="Questions1">
         <item>Which power ranger speaks to you most spiritually?</item>

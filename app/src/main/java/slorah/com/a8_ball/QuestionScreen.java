@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.view.View.OnKeyListener;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
 /**
  * Created by anusl on 7/12/2017.
  */
@@ -33,6 +34,10 @@ public class QuestionScreen extends AppCompatActivity implements OnKeyListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionlayout);
+
+        //set page font
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "gabriola.ttf", true);
 
         //get references to the widget
         final Button submitbutton = (Button) findViewById(R.id.submitbutton);

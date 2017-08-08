@@ -12,13 +12,16 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="YES"
-        android:layout_alignBaseline="@+id/noButton"
-        android:layout_alignBottom="@+id/noButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:onClick="goToQuestion"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp" />
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:background="@drawable/my_button_bg"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/noButton"
@@ -26,13 +29,16 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="NO"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="goToExit"
+        android:background="@drawable/my_button_bg"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="179dp"
-        android:onClick="goToExit" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/restartView"
@@ -40,8 +46,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Would you like to ask again?"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp"
+        android:visibility="visible"
+        android:layout_marginBottom="82dp"
+        android:layout_above="@+id/yesButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/responsetext"
@@ -51,8 +63,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:text="@string/responsetextvalue"
-        android:textColorHint="@android:color/holo_red_dark"
-        android:textColor="@android:color/holo_red_dark" />
+        android:textColor="@android:color/background_light"
+        android:textSize="35sp"
+        android:visibility="visible"
+        android:textAlignment="center" />
 
 
 </RelativeLayout>

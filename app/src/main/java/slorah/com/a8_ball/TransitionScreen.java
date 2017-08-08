@@ -15,6 +15,7 @@ import java.util.Random;
 
 import static android.R.id.progress;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
 
 /**
  * Created by anusl on 7/12/2017.
@@ -34,6 +35,10 @@ public class TransitionScreen extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transitionlayout);
+
+        //set page font
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "gabriola.ttf", true);
 
         //get references to the widget
         progressBar = (ProgressBar) findViewById(R.id.progressBar);

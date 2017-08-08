@@ -13,6 +13,8 @@ import android.app.PendingIntent;
 import android.app.Notification;
 import android.app.NotificationManager;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
+
 public class IntroScreen extends AppCompatActivity {
 
     private TextView introText;
@@ -24,6 +26,10 @@ public class IntroScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.introlayout);
         startTimer();
+
+        //set page font
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "gabriola.ttf", true);
 
         //get references to the widget
         introText = (TextView) findViewById(R.id.introText);
@@ -80,7 +86,7 @@ public class IntroScreen extends AppCompatActivity {
         //needs to be linked to the correct icon once finalized
         int icon = R.mipmap.ic_launcher;
         CharSequence tickerText = "Have a hot date coming up?";
-        CharSequence noteText = "Have a hot date coming up? \n Let us predict how lucky you will get?";
+        CharSequence noteText = "Have a hot date coming up?";
 
         //Create notification object
         Notification notification = new Notification.Builder(this)

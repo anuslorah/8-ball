@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import me.anwarshahriar.calligrapher.Calligrapher;
 /**
  * Created by anusl on 7/12/2017.
  */
@@ -17,6 +18,10 @@ public class SplashScreen extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashlayout);
+
+        //set page font
+        Calligrapher calligrapher = new Calligrapher(this);
+        calligrapher.setFont(this, "gabriola.ttf", true);
 
         //handler times out the splashlayout after SPLASH_TIME_OUT
         new Handler().postDelayed(new Runnable() {
