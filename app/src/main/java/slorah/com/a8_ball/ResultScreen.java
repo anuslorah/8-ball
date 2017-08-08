@@ -1,5 +1,6 @@
 package slorah.com.a8_ball;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,14 +15,12 @@ import java.util.Random;
  * Created by anusl on 7/12/2017.
  */
 
-
 public class ResultScreen extends AppCompatActivity {
 
-    private Button yesButton;
-    private Button noButton;
+    //private Button yesButton;
+    //private Button noButton;
     public TextView responseText;
     String[] AnswerArray;
-    //String response;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +28,34 @@ public class ResultScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultlayout);
 
+        //get references to the widget
+        final Button yesButton = (Button) findViewById(R.id.yesButton);
+        final Button noButton = (Button) findViewById(R.id.noButton);
+
+
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Start Resultscreen.class
+                Intent myIntent = new Intent(ResultScreen.this,
+                        QuestionScreen.class);
+                startActivity(myIntent);
+            }
+        });
+
+        noButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Start Resultscreen.class
+                Intent myIntent = new Intent(ResultScreen.this,
+                        ExitScreen.class);
+                startActivity(myIntent);
+            }
+        });
 
         //get references to the widget
-        yesButton = (Button) findViewById(R.id.yesButton);
-        noButton = (Button) findViewById(R.id.noButton);
         responseText = (TextView) findViewById(R.id.responsetext);
         //get the array
         AnswerArray = getResources().getStringArray(R.array.Answers);
-        responseText.setText("gggg");
-        //textView.setText(AnswerArray[generatedIndex]);
-
-        //updateTextView();
-
-
+        updateTextView();
     }
 
     @Override
@@ -56,18 +70,13 @@ public class ResultScreen extends AppCompatActivity {
 
         int maxIndex = AnswerArray.length;
         int generatedIndex = random.nextInt(maxIndex);
-
-        //textView.setText("Boo");
-
         textView.setText(AnswerArray[generatedIndex]);
     }
-
 
     //clicking yes button transitions to questionlayout and no transitions to exitlayout
     public void goToQuestion(View view) {
         setContentView(R.layout.questionlayout);
     }
-
     public void goToExit(View view) {
         setContentView(R.layout.exitlayout);
     }

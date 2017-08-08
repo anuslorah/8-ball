@@ -64,8 +64,6 @@ public class QuestionScreen extends AppCompatActivity implements OnKeyListener {
         answer3.setOnKeyListener(this);
         answer4.setOnKeyListener(this);
 
-
-
         //create array adapter for specified array and layout
         ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this, R.array.Questions1,     R.layout.textview);
         question1Spinner.setAdapter(adapter1);
@@ -91,15 +89,7 @@ public class QuestionScreen extends AppCompatActivity implements OnKeyListener {
 
         adapter4.setDropDownViewResource(R.layout.textview);
         question4Spinner.setAdapter(adapter4);
-
-
     }
-
-
-    //clicking the button transitions to transitionlayout
-    //public void goToTransition(View view){
-    //    setContentView(R.layout.resultlayout);
-    //}
 
     @Override
     public boolean onKey(View view, int keyCode, KeyEvent event) {
