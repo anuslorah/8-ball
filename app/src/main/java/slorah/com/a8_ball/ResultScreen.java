@@ -4,22 +4,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
 
 import me.anwarshahriar.calligrapher.Calligrapher;
-/**
- * Created by anusl on 7/12/2017.
- */
+
 
 public class ResultScreen extends AppCompatActivity {
 
-    //private Button yesButton;
-    //private Button noButton;
+    private Button yesButton;
+    private Button noButton;
     public TextView responseText;
     String[] AnswerArray;
 

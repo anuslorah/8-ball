@@ -63,8 +63,9 @@ public class IntroScreen extends AppCompatActivity {
 
         timer = new Timer(true);
         int delay = 1000 * 10;           // 50 seconds
-        int interval = 1000 * 60 * 60;       //10 seconds for testing
+        //int interval = 1000 * 60 * 60;       //10 seconds for testing
         //int interval = 1000 * 60 * 60 * 72;   // 72 hour
+        int interval = 1000 * 60 * 60 * 24;   // 24 hour test before launch
         timer.schedule(task, delay, interval);
     }
 
@@ -86,7 +87,7 @@ public class IntroScreen extends AppCompatActivity {
         //needs to be linked to the correct icon once finalized
         int icon = R.mipmap.ic_launcher;
         CharSequence tickerText = "Have a hot date coming up?";
-        CharSequence noteText = "Have a hot date coming up?";
+        CharSequence noteText = "Have a hot date coming up? Let us predict your night?";
 
         //Create notification object
         Notification notification = new Notification.Builder(this)

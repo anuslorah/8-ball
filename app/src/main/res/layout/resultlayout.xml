@@ -10,11 +10,10 @@
         android:id="@+id/yesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="YES"
+        android:text="@string/yesButton"
         android:onClick="goToQuestion"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:background="@drawable/my_button_bg"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp"
@@ -27,10 +26,9 @@
         android:id="@+id/noButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="NO"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
+        android:text="@string/noButton"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         android:onClick="goToExit"
         android:background="@drawable/my_button_bg"
         android:textColor="@android:color/holo_red_dark"
@@ -41,32 +39,17 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:id="@+id/restartView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Would you like to ask again?"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="25sp"
-        android:visibility="visible"
-        android:layout_marginBottom="82dp"
-        android:layout_above="@+id/yesButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAlignment="center" />
-
-    <TextView
         android:id="@+id/responsetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/restartView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
         android:text="@string/responsetextvalue"
         android:textColor="@android:color/background_light"
         android:textSize="35sp"
         android:visibility="visible"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp" />
 
 
 </RelativeLayout>

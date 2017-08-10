@@ -1,14 +1,22 @@
 <resources>
-    <string name="app_name">D8-Ball</string>
+    <string name="app_name">Magic D8-Ball</string>
     <string name="introText">Welcome to the great dating predictor</string>
-    <string name="submitbutton">submit</string>
-    <string name="progressTextView2">Hang Tight! We are calculating your prediction now...</string>
+    <string name="submitbutton">Submit</string>
+    <string name="yesButton">YES</string>
+    <string name="noButton">NO</string>
+    <string name="progressTextView2">Hang Tight! We are calculating your prediction now&#8230;</string>
     <string name="responsetextvalue" />
     <string name="blankTextView" />
+    <string name="question1" />
+    <string name="question2" />
+    <string name="question3" />
+    <string name="answer3">Enter your answer here</string>
+    <string name="answer2">Enter your answer here</string>
+    <string name="answer1">Enter your answer here</string>
 
     <string-array name="Questions1">
         <item>Which power ranger speaks to you most spiritually?</item>
-        <item>What...is your quest?</item>
+        <item>What&#8230;is your quest?</item>
         <item>Do you think cats have any regrets?</item>
         <item>What’s the longest you’ve left dropped food on the floor for before picking it up and eating it?</item>
         <item>How many murders have you witnessed?</item>
@@ -23,7 +31,7 @@
     </string-array>
 
     <string-array name="Questions3">
-        <item>Which room in Hogwarts would you most wanna have sex in?</item>
+        <item>Which room in Hogwarts would you most want to have sex in?</item>
         <item>How big do you think Thor’s penis is, just like, scientifically speaking?</item>
         <item>Can I trust you to never pressure me into faving one of your tweets? Ever. Like, not even if we get married?</item>
         <item>Do you put the toilet paper roll on the right way or the murderer way?</item>
@@ -46,26 +54,26 @@
         <item>On second thought, bring flowers too.</item>
         <item>Listen it’s not my fault your father didn\'t love you. Get off my back!</item>
         <item>Ask again later. I can\'t…I just can\'t deal with this right now.</item>
-        <item>You weren\'t born smart, but it looks like a change is in the air...good luck!</item>
+        <item>You weren\'t born smart, but it looks like a change is in the air&#8230;good luck!</item>
         <item>You should tell your date to FUCK OFF!</item>
         <item>Stay home, drink heavily and touch yourself!</item>
         <item>How do you feel about livestock for an alternative dating experience?</item>
-        <item>No one likes you!! I\'m sure you knew that...</item>
-        <item>Pack a bag full of ruffies and head out!</item>
-        <item>Invest money in flesh light stock...</item>
+        <item>No one likes you!! I\'m sure you knew that&#8230;</item>
+        <item>Pack a bag full of rufies and head out!</item>
+        <item>Invest money in flesh light stock&#8230;</item>
         <item>You can leave the antibiotics at home.</item>
-        <item>You will live a long happy life together... so you think.</item>
+        <item>You will live a long happy life together&#8230; so you think.</item>
         <item>Save time, stop looking, you have found your match.</item>
         <item>You rely on the magic 8-ball too much! Get a life!</item>
         <item>You will never be lonely again!</item>
         <item>Tonight will be the best tossed salad you ever had.</item>
         <item>Use birth control!</item>
         <item>You will get laid tonight if you play your cards right!</item>
-        <item>Don\'t expect love...or your date, to show up.</item>
-        <item>Don\'t fret my pet, all will be well...</item>
+        <item>Don\'t expect love&#8230;or your date, to show up.</item>
+        <item>Don\'t fret my pet, all will be well&#8230;</item>
         <item>It\'s not just your mom who likes you, so does your upcoming date.</item>
-        <item>Don\'t just give up...you\'re not hopeless or ugly!</item>
-        <item>Buy some eggs before your date...you\'ll be making breakfast in bed.</item>
+        <item>Don\'t just give up&#8230;you\'re not hopeless or ugly!</item>
+        <item>Buy some eggs before your date&#8230;you\'ll be making breakfast in bed.</item>
         <item>Just nod your head, smile and bring lube.</item>
         <item>I see warts in your future!</item>
         <item>Tomorrow, invest heavily in antibiotics.</item>
@@ -75,20 +83,20 @@
         <item>Smile and stop thinking of your ex. I predict good times ahead.</item>
         <item>WTF!</item>
         <item>WTF! (Wrestle Then Fuck)</item>
-        <item>I don\'t like you enough to give you a prediction...</item>
-        <item>I predict you will shake the 8-ball again...</item>
-        <item>Your date is a stalker...BONUS?</item>
-        <item>You will be in love for one night...</item>
-        <item>Put down the pipe...be alert...don\'t mess this up!</item>
+        <item>I don\'t like you enough to give you a prediction&#8230;</item>
+        <item>I predict you will shake the 8-ball again&#8230;</item>
+        <item>Your date is a stalker&#8230;BONUS?</item>
+        <item>You will be in love for one night&#8230;</item>
+        <item>Put down the pipe&#8230;be alert&#8230;don\'t mess this up!</item>
         <item>RUN!</item>
         <item>I see a Viagra refill in the future.</item>
-        <item>Your date will beat you silly tonight...in a good way...score!!!!!</item>
-        <item>For a good time call ...someone who gives a fuck!</item>
+        <item>Your date will beat you silly tonight&#8230;in a good way&#8230;score!!!!!</item>
+        <item>For a good time call &#8230;someone who gives a fuck!</item>
         <item>You have a better chance having sex with your pillow!</item>
         <item>Don\'t commit suicide with a butter knife yet, hot night ahead!</item>
         <item>You will turn into a dildo at midnight!</item>
         <item>You will be married in Vegas by the end of the night.</item>
-        <item>Yes... you will fall in love tonight...but will they?!?</item>
+        <item>Yes&#8230; you will fall in love tonight&#8230;but will they?!?</item>
         <item>Giggity, Giggity!!!</item>
     </string-array>
 </resources>
