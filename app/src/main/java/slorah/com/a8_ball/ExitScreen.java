@@ -1,17 +1,9 @@
 package slorah.com.a8_ball;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
-
 import me.anwarshahriar.calligrapher.Calligrapher;
-
-/**
- * Created by anusl on 8/7/2017.
- */
 
 public class ExitScreen extends AppCompatActivity {
 
@@ -34,6 +26,5 @@ public class ExitScreen extends AppCompatActivity {
                 finishAffinity();
             }
         }, TIME_OUT);
-
-    }
+    }//end onCreate
 }

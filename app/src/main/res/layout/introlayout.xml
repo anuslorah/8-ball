@@ -6,12 +6,4 @@
     android:layout_height="match_parent"
     android:background="@drawable/welcome">
 
-
-    <TextView
-        android:id="@+id/introText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20sp"
-        android:text="@string/introText" />
-
 </FrameLayout>

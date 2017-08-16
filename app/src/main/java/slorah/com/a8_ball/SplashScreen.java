@@ -4,15 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-
 import me.anwarshahriar.calligrapher.Calligrapher;
-/**
- * Created by anusl on 7/12/2017.
- */
 
 public class SplashScreen extends AppCompatActivity{
 
     private static int TIME_OUT = 3000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -35,7 +32,5 @@ public class SplashScreen extends AppCompatActivity{
 
 
         },TIME_OUT);
-
-
-    }
+    }//end onCreate
 }

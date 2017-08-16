@@ -4,19 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import android.widget.Button;
 import android.widget.TextView;
-
 import java.util.Random;
-
 import me.anwarshahriar.calligrapher.Calligrapher;
-
 
 public class ResultScreen extends AppCompatActivity {
 
-    private Button yesButton;
-    private Button noButton;
     public TextView responseText;
     String[] AnswerArray;
 
@@ -30,11 +24,9 @@ public class ResultScreen extends AppCompatActivity {
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "gabriola.ttf", true);
 
-
         //get references to the widget
         final Button yesButton = (Button) findViewById(R.id.yesButton);
         final Button noButton = (Button) findViewById(R.id.noButton);
-
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -59,7 +51,7 @@ public class ResultScreen extends AppCompatActivity {
         //get the array
         AnswerArray = getResources().getStringArray(R.array.Answers);
         updateTextView();
-    }
+    }//end onCreate
 
     @Override
     protected void onResume() {
@@ -83,5 +75,4 @@ public class ResultScreen extends AppCompatActivity {
     public void goToExit(View view) {
         setContentView(R.layout.exitlayout);
     }
-
 }

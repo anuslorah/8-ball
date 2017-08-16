@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.view.View.OnKeyListener;
 import android.widget.TextView;
-
 import java.util.Random;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
@@ -93,16 +92,17 @@ public class QuestionScreen extends AppCompatActivity implements OnKeyListener {
             return false;
         }
         return false;
-    }
+    }//end onKey
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        updateTextView1();
-        updateTextView2();
-        updateTextView3();
-    }
-
+    /*
+        @Override
+        protected void onResume() {
+            super.onResume();
+            updateTextView1();
+            updateTextView2();
+            updateTextView3();
+        }//end onResume
+    */
     private void updateTextView1() {
         TextView textView1 = (TextView) findViewById(R.id.Question1);
         Random random = new Random();

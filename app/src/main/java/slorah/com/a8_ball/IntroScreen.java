@@ -2,24 +2,23 @@ package slorah.com.a8_ball;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.widget.TextView;
 import android.app.PendingIntent;
 import android.app.Notification;
 import android.app.NotificationManager;
-
 import me.anwarshahriar.calligrapher.Calligrapher;
 
 public class IntroScreen extends AppCompatActivity {
 
-    private TextView introText;
-    private static int TIME_OUT = 5000;
+    private static int TIME_OUT = 6000;
     private Timer timer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,8 +30,6 @@ public class IntroScreen extends AppCompatActivity {
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "gabriola.ttf", true);
 
-        //get references to the widget
-        introText = (TextView) findViewById(R.id.introText);
 
         //handler times out the introlayout after TIME_OUT
         new Handler().postDelayed(new Runnable() {
@@ -44,9 +41,7 @@ public class IntroScreen extends AppCompatActivity {
                 finish();
             }
         },TIME_OUT);
-
-        //Handler.removeCallback();
-    }
+    }//end onCreate
 
     private void startTimer() {
         TimerTask task = new TimerTask() {
@@ -73,7 +68,7 @@ public class IntroScreen extends AppCompatActivity {
         if (timer != null) {
             timer.cancel();
         }
-    }
+    }//end startTimer
 
     private void sendNotification(String text) {
         // create the intent for the notification
@@ -84,16 +79,18 @@ public class IntroScreen extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, flag);
 
         //Create notification
-        //needs to be linked to the correct icon once finalized
         int icon = R.mipmap.ic_launcher;
         CharSequence tickerText = "Have a hot date coming up?";
-        CharSequence noteText = "Have a hot date coming up? Let us predict your night?";
+        CharSequence noteText = "Have a hot date coming up? Let us predict your night!";
+
 
         //Create notification object
-        Notification notification = new Notification.Builder(this)
+        Notification notification = new NotificationCompat.Builder(this)
                 // .setSmallIcon(icon)
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setTicker(tickerText)
+                .setContentTitle("Magic D8-Ball")
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(noteText))
                 .setContentText(noteText)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
@@ -104,6 +101,5 @@ public class IntroScreen extends AppCompatActivity {
                 getSystemService(NOTIFICATION_SERVICE);
         final int NOTIFICATION_ID = 1;
         manager.notify(NOTIFICATION_ID, notification);
-    }
-
+    }//end sendNotification
 }

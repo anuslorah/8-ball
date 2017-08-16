@@ -16,7 +16,7 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/my_button_bg"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
@@ -32,7 +32,7 @@
         android:onClick="goToExit"
         android:background="@drawable/my_button_bg"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="24sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -42,14 +42,16 @@
         android:id="@+id/responsetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/responsetextvalue"
-        android:textColor="@android:color/background_light"
-        android:textSize="35sp"
-        android:visibility="visible"
-        android:textAlignment="center"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp" />
+        android:layout_centerVertical="true"
+        android:layout_marginTop="160dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/responsetextvalue"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        android:visibility="visible" />
 
 
 </RelativeLayout>

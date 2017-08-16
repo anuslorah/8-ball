@@ -4,7 +4,6 @@
     <string name="submitbutton">Submit</string>
     <string name="yesButton">YES</string>
     <string name="noButton">NO</string>
-    <string name="progressTextView2">Hang Tight! We are calculating your prediction now&#8230;</string>
     <string name="responsetextvalue" />
     <string name="blankTextView" />
     <string name="question1" />
