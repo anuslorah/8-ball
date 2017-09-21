@@ -31,10 +31,9 @@
                 <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
                 <data
                     android:scheme="http"
-                    android:host="www.magic-d8-ball.com" />
+                    android:host="www.magicd8ball.com" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".QuestionScreen"
             android:screenOrientation="sensorPortrait" />
