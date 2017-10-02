@@ -6,13 +6,14 @@ package slorah.com.a8_ball;
 
 import android.content.Context;
 import android.view.GestureDetector;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
-
+import android.view.View.OnTouchListener;
 /**
  * Detects left and right swipes across a view.
  */
-public class OnSwipeTouchListener implements View.OnTouchListener {
+public class OnSwipeTouchListener implements OnTouchListener {
 
     private final GestureDetector gestureDetector;
 
@@ -30,7 +31,7 @@ public class OnSwipeTouchListener implements View.OnTouchListener {
         return gestureDetector.onTouchEvent(event);
     }
 
-    private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+    private final class GestureListener extends SimpleOnGestureListener {
 
         private static final int SWIPE_DISTANCE_THRESHOLD = 100;
         private static final int SWIPE_VELOCITY_THRESHOLD = 100;

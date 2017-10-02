@@ -94,15 +94,6 @@ public class QuestionScreen extends AppCompatActivity implements OnKeyListener {
         return false;
     }//end onKey
 
-    /*
-        @Override
-        protected void onResume() {
-            super.onResume();
-            updateTextView1();
-            updateTextView2();
-            updateTextView3();
-        }//end onResume
-    */
     private void updateTextView1() {
         TextView textView1 = (TextView) findViewById(R.id.Question1);
         Random random = new Random();

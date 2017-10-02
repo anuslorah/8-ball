@@ -2,14 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="slorah.com.a8_ball">
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
-        android:supportsRtl="true"
         android:screenOrientation="sensorPortrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".SplashScreen"
@@ -30,24 +29,24 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
                 <data
-                    android:scheme="http"
-                    android:host="www.magic-d8-ball.com" />
+                    android:host="www.magic-d8-ball.com"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".QuestionScreen"
             android:screenOrientation="sensorPortrait" />
         <activity
             android:name=".ResultScreen"
             android:screenOrientation="sensorPortrait" />
-        <activity
-            android:name=".ContentWarningScreen"
-            android:screenOrientation="sensorPortrait" />
+
         <activity
             android:name=".ExitScreen"
             android:screenOrientation="sensorPortrait" />
 
+        <activity
+            android:name=".ContentWarningScreen"
+            android:screenOrientation="sensorPortrait" />
     </application>
 
 </manifest>

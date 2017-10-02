@@ -8,41 +8,36 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
-import android.widget.TextView;
 import android.app.PendingIntent;
 import android.app.Notification;
 import android.app.NotificationManager;
 import me.anwarshahriar.calligrapher.Calligrapher;
 
+import android.support.v4.view.GestureDetectorCompat;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+
 public class IntroScreen extends AppCompatActivity {
 
-    private static int TIME_OUT = 6000;
     private Timer timer;
+    private GestureDetectorCompat gestureObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.introlayout);
+
         startTimer();
 
         //set page font
         Calligrapher calligrapher = new Calligrapher(this);
         calligrapher.setFont(this, "gabriola.ttf", true);
 
+        gestureObject = new GestureDetectorCompat(this, new IntroScreen.LearnGesture());
+        //here learnGesture is class file
 
-        //handler times out the introlayout after TIME_OUT
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                Intent i = new Intent(IntroScreen.this, QuestionScreen.class);
-                startActivity(i);
-                finish();
-            }
-        },TIME_OUT);
-    }//end onCreate
-
+    }//end of onCreate
     private void startTimer() {
         TimerTask task = new TimerTask() {
 
@@ -102,4 +97,38 @@ public class IntroScreen extends AppCompatActivity {
         final int NOTIFICATION_ID = 1;
         manager.notify(NOTIFICATION_ID, notification);
     }//end sendNotification
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.gestureObject.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }//end of onTouchEvent
+
+
+    //now create the gesture Object class
+
+    class LearnGesture extends GestureDetector.SimpleOnGestureListener {
+        //SimpleOnGestureListener listens for what we want to do and how
+
+        @Override
+        public boolean onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY) {
+
+            if (event2.getX() > event1.getX()) {
+                //left to right swipe
+                // Start QuestionScreen.class
+                Intent myIntent = new Intent(IntroScreen.this, ContentWarningScreen.class);
+
+                startActivity(myIntent);
+                finish();
+            } else if (event2.getX() < event1.getX()) {
+                //right to left swipe
+                Intent myIntent = new Intent(IntroScreen.this, QuestionScreen.class);
+
+                startActivity(myIntent);
+                finish();
+            }
+            return true;
+        }
+    }//end LearnGesture
+
 }
